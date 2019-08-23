@@ -31,3 +31,34 @@ print('          world'.strip())
 ss = ['hello', 'world', 'python']
 concat = ' '.join(ss)
 print(concat)
+#%%
+xs = [2,0,1,8,0,9]
+print('Length of list: {}'.format(len(xs)))
+print('First Element: {}'.format(xs[0]))
+print('Last Element: {}'.format(xs[-1]))
+
+
+#%%
+xs[2] = 'foo'
+print(xs)
+xs.append('bar')
+print(xs)
+#%%
+x = xs.pop()
+print(x, xs)
+#%%
+nums = range(5)
+print(type(nums))
+nums = list(nums)
+print(type(nums))
+#%%
+print(nums)
+print(nums[2:4])
+print(nums[2:])
+print(nums[:2])
+print(nums[:])
+print(nums[-1])
+print(nums[:-1])
+nums[2:4] = [8,9]
+print(nums)
+print(nums[::-1])
