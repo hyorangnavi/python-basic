@@ -124,7 +124,63 @@ print(len(animals))
 animals.remove('cat')
 print(len(animals))
 #%%
+animals = {'cat','dog','fish'}
+for idx, animal in enumerate(animals):
+    print('#%d: %s' %(idx+1,animal))
+#%%
+d = { (x,x+1): x for x in range(10)}
+t = (5,6)
+print(type(t))
+print('key: {}, value: {}'.format(t,d[t]))
+#%%
+print(d)
+#%%
+def sign(x):
+    if x>0:
+        return 'positive'
+    elif x<0:
+        return 'negative'
+    else:
+        return 'zero'
+
+for x in [-1,0,1]:
+    print('{}: {}'.format(x, sign(x)))
 
 #%%
+def hello(name, loud=False):
+    if loud:
+        print('HELLO, %s' % name.upper())
+    else:
+        print('Hello, %s' % name)
+
+hello('Bob')
+hello('Fred',loud=True)
+
 
 #%%
+class Greeter(object):
+    def __init__(self, name):
+        self.name = name
+    def greet(self, loud=False):
+        if loud:
+            print('HELLO, %s' % self.name.upper())
+        else:
+            print('Hello, %s' % self.name)
+
+g = Greeter('Fred')
+g.greet()
+g.greet(loud=True)
+
+#%%
+import numpy as np
+#%%
+a = np.array([1,2,3])
+print("Type :",type(a))
+print("Shape :", a.shape)
+print("Values :", a[0],a[1],a[2])
+a[0] = 5
+print("Values :", a)
+#%%
+b = np.array([[1,2,3],[4,5,6]])
+print(b)
+print("Values :",b)
