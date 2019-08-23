@@ -62,3 +62,69 @@ print(nums[:-1])
 nums[2:4] = [8,9]
 print(nums)
 print(nums[::-1])
+#%%
+animals = ['cat','dog','monkey']
+for animal in animals:
+    print(animal)
+#%%
+nums = list(range(5))
+print(nums)
+squares = []
+for x in nums:
+    squares.append(x**2)
+print(squares)
+#%%
+even_squares = [x**2 for x in nums if x%2 ==0]
+print(even_squares)
+#%%
+# Dictionary
+d = {'cat': 'cute', 'dog':'furry'}
+print(d['cat'])
+print(d.get('cat'))
+print('cat' in d)
+print('cute' in d)
+#%%
+d['fish'] = 'wet'
+print(d)
+#%%
+print(d['tuttle'])
+#%%
+print(d.get('tuttle'))
+#%%
+print(d.get('monkey', 'N/A'))
+print(d.get('fish', 'N/A'))
+#%%
+d = {'person':2, 'cat':4,'spider':8}
+for animal in d:
+    legs = d.get(animal)
+    print('A {} has {} legs'.format(animal,legs))
+#%%
+d.update({'ant':6})
+for animal in d:
+    legs = d.get(animal)
+    print('A {} has {} legs'.format(animal,legs))
+#%%
+nums = list(range(5))
+even_num_to_square = {x: x**2 for x in nums if x%2 ==0}
+print(even_num_to_square)
+#%%
+animals = {'cat','dog'}
+print('cat' in animals)
+print('fish' in animals)
+#%%
+
+#%%
+animals.add('fish')
+print(animals)
+print('fish' in animals)
+print(len(animals))
+#%%
+animals.add('cat')
+print(len(animals))
+animals.remove('cat')
+print(len(animals))
+#%%
+
+#%%
+
+#%%
