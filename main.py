@@ -309,11 +309,69 @@ print(z2)
 print(z3)
 np.testing.assert_array_equal(z1, z2, z3)
 #%%
+print(x)
+print(np.sqrt(x))
+#%%
+x = np.array([[1,2],[3,4]])
+y = np.array([[5,6],[7,8]])
+
+v = np.array([9,10])
+w = np.array([11,12])
+
+z1 = v.dot(w)
+z2 = np.dot(v,w)
+z3 = np.matmul(v,w)
+z4 = v @ w
+print(z1,z2,z3,z4)
+np.testing.assert_array_equal(z1,z2,z3,z4)
+#%%
+z1 = x.dot(v)
+z2 = np.dot(x,v)
+z3 = np.matmul(x,v)
+z4 = x@ v
+print(z1,z2,z3,z4)
+#%%
+z1 = x.dot(y)
+z2 = np.dot(x,y)
+z3 = np.matmul(x,y)
+z4 = x @ y
+print(z1, end='\n\n')
+print(z2, end='\n\n')
+print(z3, end='\n\n')
+print(z4, end='\n\n')
+#%%
+x =np.array([[1,2]
+            ,[3,4]])
+
+print(np.sum(x, axis=None))
+print(np.sum(x, axis=0))
+print(np.sum(x, axis=1))
 
 #%%
-
+print(x)
+print(x.T)
 #%%
-
+v = np.array([1,2,3])
+print(v, v.shape)
+print(v.T, v.T.shape)
 #%%
-
+x = np.array([[1,2,3],[4,5,6],[7,8,9],[10,11,12]])
+print('shape of x:', x.shape)
+print(x)
+#%%
+y = np.reshape(x, (3,4))
+print('shape of y:',y.shape)
+print(y)
+#%%
+z = np.reshape(x,(12,1))
+print('shape of z:', z.shape)
+print(z)
+#%%
+w = np.reshape(x, (1,12))
+print('shape of w:',w.shape)
+print(w)
+#%%
+v = np.reshape(x, (-1,12))
+print('shape of v:',v.shape)
+print(v)
 #%%
