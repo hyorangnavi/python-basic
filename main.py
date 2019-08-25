@@ -184,3 +184,136 @@ print("Values :", a)
 b = np.array([[1,2,3],[4,5,6]])
 print(b)
 print("Values :",b)
+
+#%%
+print(b.shape)
+print(b[0,0], b[0,1], b[1,0])
+
+#%%
+a = np.zeros((3,3))
+print(a)
+#%%
+b = np.ones((1,2))
+print(b)
+#%%
+c = np.full((2,2),7)
+print(c)
+#%%
+d = np.eye(2)
+print(d)
+#%%
+e = np.random.random((3,3))
+print(e)
+#%%
+import numpy as np
+
+a = np.array([[1,2,3,4],[5,6,7,8],[9,10,11,12]])
+print(a)
+print(a.shape)
+#%%
+b = a[:, 1:]
+print(b)
+#%%
+print(a[0,1])
+b[0,0] = 77
+print(b)
+
+#%%
+a = np.array([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
+print(a)
+#%%
+row_r1 = a[1,:]
+row_r2 = a[1:2, :]
+row_r3 = a[[1],:]
+print(row_r1 , row_r1.shape)
+print(row_r2 , row_r2.shape)
+print(row_r3 , row_r3.shape)
+
+#%%
+col_r1= a[:,1]
+col_r2= a[:,1:2]
+print(col_r1, col_r1.shape)
+print(col_r2, col_r2.shape)
+
+#%%
+a = np.array([[1,2],[3,4],[5,6]])
+print(a[[0,1,2],[0,1,0]])
+print(np.array([a[0,0],a[1,1],a[2,0]]))
+#%%
+print(a[[0,0],[0,1]])
+print(np.array([a[0,0],a[0,1]]))
+#%%
+a = np.array([[1,2,3],[4,5,6],[7,8,9],[10,11,12]])
+print(a)
+#%%
+b = np.array([0,2,0,1])
+print(b)
+c = a[np.arange(4),b]
+print(c)
+#%%
+print(np.arange(4))
+#%%
+a[np.arange(4),b] += 10
+print(a)
+#%%
+a = np.array([[1,2],[3,4],[5,6]])
+bool_idx = (a>2)
+print(bool_idx)
+#%%
+print(a[bool_idx])
+print(a[a>2])
+
+#%%
+print(a>2)
+#%%
+x = np.array([1,2])
+y = np.array([1.0,2.0])
+z = np.array([1,2], dtype=np.uint8)
+
+print(x.dtype, y.dtype, z.dtype)
+
+#%%
+x = np.array([[1,2],[3,4]], dtype=np.float64)
+y = np.array([[5,6],[7,8]],dtype=np.float64)
+
+z1 = x+y
+z2 = np.add(x,y)
+print(z1)
+print(z2)
+
+print(np.testing.assert_array_equal(z1,z2) )# Test it
+#%%
+z1 = x-y
+z2 = np.subtract(x,y)
+print(z1)
+print(z2)
+print(np.testing.assert_array_equal(z1,z2))
+
+#%%
+z1 = x * y
+z2 = np.multiply(x, y)
+print(z1)
+print(z2)
+#%%
+z1 = x / y
+z2 = np.divide(x, y)
+print(z1)
+print(z2)
+np.testing.assert_array_equal(z1, z2)
+#%%
+z1 = x // y
+z2 = np.floor(np.divide(x, y))
+z3 = np.floor_divide(x, y)
+print(z1)
+print(z2)
+print(z3)
+np.testing.assert_array_equal(z1, z2, z3)
+#%%
+
+#%%
+
+#%%
+
+#%%
+
+#%%
