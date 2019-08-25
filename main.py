@@ -375,3 +375,20 @@ v = np.reshape(x, (-1,12))
 print('shape of v:',v.shape)
 print(v)
 #%%
+x = np.array([[1,2,3],[4,5,6],[7,8,9],[10,11,12]])
+v= np.array([1,0,1])
+y =np.zeros_like(x)
+print(y)
+#%%
+for i in range(4):
+    y[i,:] = x[i,:] + v
+print(y)
+#%%
+vv = np.tile(v,(4,1))
+print(vv)
+#%%
+y= x+vv
+print(y)
+#%%
+print(y)
+#%%
